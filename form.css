@@ -1,0 +1,177 @@
+/* spolocne vlastnosti */
+
+.form-box > label {
+  padding: 15px;
+  display: inline-block;
+}
+
+.custom-date label {
+  margin-bottom: 0px;
+}
+
+.form-box .tab {
+  display: none;
+  padding: 21px;
+  background-color: white;
+  margin: 0 10px 10px 10px;
+}
+
+.form-box input[name="tab"] {
+  display: none;
+}
+
+.form-box input[name="tab"]:checked + label {
+  background-color: #61ff87;
+}
+
+.form-box input#kont-form:checked ~ .kont-form,
+.form-box input#rez-form:checked ~ .rez-form,
+.form-box input#reg-form:checked ~ .reg-form {
+  display: block;
+}
+
+.tab .form-row {
+  padding: 3px;
+}
+
+/* kontaktny formular */
+
+.kont-form .form-row input[type="text"],
+.kont-form .form-row input[type="email"],
+.kont-form .form-row input[type="tel"] {
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.kont-form .form-row textarea {
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.kont-form .suhlas {
+  margin-bottom: 15px;
+}
+
+.kont-form .suhlas label span {
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.kont-form .suhlas label span::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: silver;
+  border-radius: 50%;
+  position: relative;
+  left: 1px;
+  transition: all 0.5s;
+}
+.kont-form .suhlas input:checked + label span::before {
+  left: 15px;
+  background-color: rgb(53, 10, 153);
+}
+
+.kont-form .suhlas input {
+  display: none;
+}
+
+.kont-form .suhlas span {
+  margin-right: 15px;
+  position: relative;
+  top: 3px;
+}
+
+/* rezervacny formular */
+
+.rez-form .form-row input[type="text"],
+.rez-form .form-row input[type="email"],
+.rez-form .form-row input[type="tel"] {
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.rez-form .form-row input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.rez-form .form-row input[type="number"] {
+  display: block;
+  width: 100%;
+  height: 30px;
+  margin: 10px 2px;
+  padding-left: 4px;
+}
+
+.rez-form .sekcia p {
+  background-color: #b0e376;
+  width: 50%;
+  padding: 10px;
+}
+
+.rez-form select {
+  display: block;
+  height: 28px;
+  margin: 10px 0;
+}
+
+.pocet {
+  display: flex;
+}
+
+.pocet label {
+  margin-right: 100px;
+}
+
+.strava label {
+  display: block;
+  margin: 13px;
+}
+
+.rez-form .form-row textarea {
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.rez-form .suhlas input {
+  display: inline;
+}
+
+.rez-form .dalsieinfo {
+  background-color: #b0e376;
+  width: 50%;
+}
+
+.rez-form button {
+  margin: 35px 0;
+}
+
+/* registracny formular */
+
+label[for="firstName"]::after,
+label[for="lastName"]::after,
+label[for="username"]::after,
+label[for="inputPassword"]::after,
+label[for="inputConfirmPassword"]::after,
+label[for="inputEmail"]::after {
+  content: "*";
+  color: red;
+  float: right;
+}
+
+input:required:invalid {
+  border-color: #e29696;
+}

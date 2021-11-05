@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="sk"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulare</title>
+    <link rel="stylesheet" href="form.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body>
+    <div class="form-box">
+        <input type="radio" name="tab" id="kont-form">
+        <label for="kont-form">Kontaktný formulár</label>
+        <input type="radio" name="tab" id="rez-form">
+        <label for="rez-form">Rezervačný formulár</label>
+        <input type="radio" name="tab" id="reg-form">
+        <label for="reg-form">Registračný formulár</label>
+
+        <!-- Kontaktný formulár -->
+
+        <div class="tab kont-form">
+            <form action="#">
+                <div class="form-row">
+                    <input type="text" name="Meno" placeholder="Meno" value="">
+                    <input type="text" name="Priezvisko" placeholder="Priezvisko" value="">
+                </div>
+                <div class="form-row">
+                    <input type="email" name="Email" placeholder="Email" value="">
+                    <input type="tel" name="Telefon" placeholder="Telefon" value="">
+                </div>
+                <div class="form-row">
+                    <textarea name="Sprava" placeholder="Vaša správa..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="suhlas">
+                        <input type="checkbox" name="gdpr1" id="gdpr1" value="ano">
+                        <label for="gdpr1"> <span></span>Súhlasím s <a href="#">podmienkami</a></label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="suhlas">
+                        <input type="checkbox" name="gdpr2" id="gdpr2" value="ano">
+                        <label for="gdpr2"><span></span>Súhlasím so zasielaním noviniek</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <button type="submit" class="btn btn-primary">Odoslať</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Rezervačný formulár -->
+
+        <div class="tab rez-form">
+            <form action="#">
+                <div class="sekcia">
+                    <p>Osobné údaje</p> 
+                    <div class="form-row">
+                        <input type="text" name="Meno" placeholder="Meno" value="">
+                        <input type="text" name="Priezvisko" placeholder="Priezvisko" value="">                   
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="Adresa" placeholder="Adresa" value="">
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" name="Telefon" placeholder="Telefon" value="">
+                        <input type="email" name="Email" placeholder="Email" value="">
+                    </div>
+                </div>
+                <div class="sekcia">
+                    <p>Dátum</p> 
+                    <div class="form-row">
+                        <div class="datum">
+                            <label>Dátum od <input type="date" name="date"></label>
+                            <label>Dátum do <input type="date" name="date"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="sekcia">
+                    <p>Osoby</p> 
+                    <div class="form-row">
+                        <div class="pocet">
+                            <label>Počet dospelých <input type="number" name="dospelí" min="0" max="20"></label>
+                            <label>Počet detí od 6 rokov <input type="number" name="deti6+" min="0" max="20"></label>
+                            <label>Počet detí do 6 rokov <input type="number" name="deti0-6" min="0" max="20"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="sekcia">
+                    <p>Ubytovanie</p> 
+                    <div class="form-row">
+                        <select class="ubytovanie" aria-label=".form-select-sm">
+                            <option selected>typ ubytovania</option>
+                            <option value="Hotel">Hotel</option>
+                            <option value="Chata">Chata</option>
+                            <option value="Apartman">Apartmán</option>
+                            <option value="Penzion">Penzión</option>
+                            <option value="Kemp">Kemp</option>
+                        </select>
+                    </div> 
+                    <div class="form-row">
+                        <select class="strava" aria-label=".form-select-sm">
+                            <option selected>typ stravovania</option>
+                            <option value="BezStravy">Bez stravy</option>
+                            <option value="Ranajky">Raňajky</option>
+                            <option value="Vecera">Večera</option>
+                            <option value="Polpenzia">Polpenzia</option>
+                            <option value="PlnaPenzia">Plná Penzia</option>
+                        </select>
+                    </div>    
+                    <div class="form-row">
+                        Izby
+                        <select class="izba" aria-label=".form-select-sm">
+                            <option selected>počet izieb</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <select class="izba" aria-label=".form-select-sm">
+                            <option selected>typ izby</option>
+                            <option value="Jednolozkova">Jednolôžková</option>
+                            <option value="Dvojlozkova">Dvojlôžková</option>
+                            <option value="Trojlozkova">Trojlôžková</option>
+                            <option value="Stvorlozkova">Štvorlôžková</option>
+                        </select>
+                    </div>              
+                </div>
+                <div class="sekcia">
+                    <p>Dodatočné informácie</p> 
+                    <div class="form-row">
+                        <textarea name="Sprava" placeholder="Vaša správa..."></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="suhlas">
+                        <input type="checkbox" name="gdpr2" id="gdpr2" value="ano">
+                        <label for="gdpr2">Súhlasím so spracúvaním osobných údajov</label>
+                    </div>
+                    <div class="suhlas">
+                        <input type="checkbox" name="gdpr2" id="gdpr2" value="ano">
+                        <label for="gdpr2">Súhlasím s <a href="#">podmienkami</a></label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <button type="submit" class="btn btn-primary">Rezervovať</button>
+                </div>
+            </form>
+
+            <div class="dalsieinfo">
+                <p>Telefonické rezervácie a informácie o zájazdoch</p> 
+                <p>
+                    Po–Ne 08:00–20:00 <br>
+                    <strong>Tel.:</strong> 123456789 <br>
+                    <strong>Fax:</strong> 123456789
+                </p>
+            </div>
+        </div>
+
+        <!-- Registračný formulár -->
+
+        <div class="tab reg-form">
+            <form class="row g-3" action="#">
+                <div class="col">
+                    <label for="firstName" class="form-label">Meno</label>
+                    <input type="text" class="form-control" placeholder="Meno" id="firstName" required>
+                </div>
+                <div class="col">
+                    <label for="lastName" class="form-label">Priezvisko</label>
+                    <input type="text" class="form-control" placeholder="Priezvisko" id="lastName" required>
+                </div>
+                <div class="col-12">
+                    <label for="username" class="form-label">Používateľské meno</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword" class="form-label">Heslo</label>
+                  <input type="password" class="form-control" id="inputPassword" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputConfirmPassword" class="form-label">Potvrdenie hesla</label>
+                    <input type="password" class="form-control" id="inputConfirmPassword" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="@" required>
+                  </div>
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label">Adresa</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Ulica a číslo domu">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">Mesto</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPSC" class="form-label">PSČ</label>
+                    <input type="text" class="form-control" id="inputPSC">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputState" class="form-label">Štát</label>
+                  <select id="inputState" class="form-select">
+                    <option selected>Vyberte</option>
+                    <option>Slovensko</option>
+                    <option>Česko</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+              </form>
+        </div>
+    </div>
+</body>
+</html>
