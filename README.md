@@ -1,1 +1,1 @@
-kontaktný, rezervačný a registračný formulár
+contact, reservation and registration form
